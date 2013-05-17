@@ -35,7 +35,6 @@ function touchhandler(e) {
     ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
     
     ctx.stroke();
-    ctx.fill();
 }
 
 function resizeCanvas(e) {
