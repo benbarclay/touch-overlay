@@ -18,6 +18,7 @@ function touchhandler(e) {
             y = e.touches[i].pageY;
         
         // Touch Point
+        ctx.moveTo(x + 30, y);
         ctx.arc(x, y, 30, 0, Math.PI*2, true);
         
         // Cross-hairs
