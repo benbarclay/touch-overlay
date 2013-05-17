@@ -12,12 +12,10 @@ function touchhandler(e) {
     ctx.strokeStyle = "#33B5E5";
     ctx.setLineWidth(1);
     
-    
+    ctx.beginPath();
     for (var i = 0; i < e.changedTouches.length; i++) {
         var x = e.changedTouches[i].pageX,
             y = e.changedTouches[i].pageY;
-        
-        ctx.beginPath();
         
         // Touch Point
         ctx.arc(x, y, 30, 0, Math.PI*2, true);
@@ -31,9 +29,8 @@ function touchhandler(e) {
         ctx.lineTo(x - 30, y);
         ctx.moveTo(x + 30, y);
         ctx.lineTo(window.innerWidth, y);
-        
-        ctx.closePath();
     }
+    ctx.closePath();
     
     ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
     
