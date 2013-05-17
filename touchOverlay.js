@@ -13,9 +13,9 @@ function touchhandler(e) {
     ctx.setLineWidth(1);
     
     ctx.beginPath();
-    for (var i = 0; i < e.changedTouches.length; i++) {
-        var x = e.changedTouches[i].pageX,
-            y = e.changedTouches[i].pageY;
+    for (var i = 0; i < e.touches.length; i++) {
+        var x = e.touches[i].pageX,
+            y = e.touches[i].pageY;
         
         // Touch Point
         ctx.arc(x, y, 30, 0, Math.PI*2, true);
